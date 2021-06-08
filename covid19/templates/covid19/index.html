@@ -1,0 +1,113 @@
+{%extends 'covid19/base.html'%}
+{% load static %}
+{% block content %}
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="my_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="container">
+                              <h1 class="banner_taital">Corona Virus Updates</h1>
+                              <p class="banner_text">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.</p>
+                              <div class="more_bt"><a href="https://www.who.int/health-topics/coronavirus#tab=tab_1">Read More</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="{% static 'images/banner-img.png' %}"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="container">
+                              <h1 class="banner_taital">Get Medical Care early</h1>
+                              <p class="banner_text">Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.</p>
+                              <div class="more_bt"><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">Read More</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="{% static 'images/banner-img.png' %}"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
+         </div>            
+      </div>
+      <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- protect section start -->
+      <div class="protect_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="protect_taital">How to Protect Yourself</h1>
+                  <p class="protect_text">Everyday preventive actions to help prevent the spread of respiratory viruses should be followed, these include:</p>
+               </div>
+            </div>
+            <div class="protect_section_2 layout_padding">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h1 class="hands_text"><a href="#">Wash your <br>hands frequently</a></h1>
+                     <h1 class="hands_text_2"><a href="#">Maintain social <br>distancing</a></h1>
+                     <h1 class="hands_text"><a href="#">Avoid touching eyes,<br>nose and mouth</a></h1>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="image_2"><img src="{% static 'images/img-2.png'%}"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- protect section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="about_img"><img src="{% static 'images/img-1.png' %}"></div>
+               </div>
+               <div class="col-md-6">
+                  <h1 class="about_taital">Coronavirus what it is?</span></h1>
+                  <p class="about_text">The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. <br>These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.
+                     You can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.</p>
+                  <div class="read_bt"><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">Read More</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+      <!-- doctor section start -->
+      <div class="doctors_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="taital_main">
+                     <div class="taital_left">
+                        <div class="play_icon"><img src="{% static 'images/play-icon.png' %}"></div>
+                     </div>
+                     <div class="taital_right">
+                        <h1 class="doctor_taital">What doctors say..</h1>
+                        <p class="doctor_text">If you have mild symptoms, you may recover at home. You'll likely be asked to isolate yourself as much as possible from family and pets while you're sick, wear a mask when you're around people and pets, and use a separate bedroom and bathroom. It is recommended that you stay in home isolation for a period of time except to get medical care. Follow guidelines from your doctor and local health department about when you can end home isolation.
+                        If you're very ill, you may need to be treated in the hospital.</p>
+                        <div class="readmore_bt"><a href="https://www.mayoclinic.org/diseases-conditions/coronavirus/diagnosis-treatment/drc-20479976">Read More</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- doctor section end -->
+    
+{% endblock %}

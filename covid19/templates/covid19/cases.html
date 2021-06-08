@@ -1,0 +1,85 @@
+{%extends 'covid19/base.html'%}
+{% load static %}
+{% block content %}
+            <!-- banner section start -->
+            <div class="container">
+               <div class="about_taital_main">
+                  <h2 class="about_tag">Corona Virus Cases</h2>
+                  <div class="about_menu">
+                     <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li>Cases</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         <!-- banner section end -->
+         </div>
+      <!-- header section end -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cases</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+            }
+        table {
+        width:100%;
+        }
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 15px;
+        text-align: left;
+        }
+        #t01 tr:nth-child(even) {
+        background-color: #eee;
+        }
+        #t01 tr:nth-child(odd) {
+        background-color: #fff;
+        }
+        #t01 th {
+        background-color: rgb(145, 141, 141);
+        color: white;
+        }
+        </style>
+    </head>
+    <body>
+      <table style="width:100%"  id="t01">
+            <tr>
+                <th>State Name</th>
+                <th>Active Cases</th>
+                <th>Total Positive Cases</th>
+                <th>Total Cured</th>
+                <th>Total Death</th>
+                <th>New active cases</th>
+                <th>New positive cases</th>
+                <th>New Cured cases</th>
+                <th>New Deaths</th>
+            </tr>
+            {% for obj in result %}
+            <tr>
+               <td>{{ obj.state_name }}</td>
+               <td>{{ obj.active }}</td>
+               <td>{{ obj.positive }}</td>
+               <td>{{ obj.cured}}</td>
+               <td> {{obj.death}}</td>
+                <td>{{ obj.new_active}}</td>
+                <td>{{ obj.new_positive}}</td>
+                <td>{{ obj.new_cured }}</td>
+                <td>{{ obj.new_death}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
+{% endblock %}

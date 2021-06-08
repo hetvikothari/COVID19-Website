@@ -1,0 +1,37 @@
+{%extends 'covid19/base.html'%}
+{% load static %}
+{% block content %}
+            <!-- banner section start -->
+            <div class="container">
+               <div class="about_taital_main">
+                  <h2 class="about_tag">About Corona Virus</h2>
+                  <div class="about_menu">
+                     <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li>About</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         <!-- banner section end -->
+         </div>
+      <!-- header section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="about_img"><img src="{% static 'images/img-1.png' %}"></div>
+               </div>
+               <div class="col-md-6">
+                  <h1 class="about_taital">Coronavirus what it is?</span></h1>
+                  <p class="about_text">The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. <br>These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.
+                     You can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.</p>
+                  <div class="read_bt"><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">Read More</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+ 
+{% endblock %}

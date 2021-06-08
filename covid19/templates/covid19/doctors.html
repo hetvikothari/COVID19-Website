@@ -1,0 +1,40 @@
+{%extends 'covid19/base.html'%}
+{% load static %}
+{% block content %}
+            <!-- banner section start -->
+            <div class="container">
+               <div class="about_taital_main">
+                  <h2 class="about_tag">Doctors Corona Virus</h2>
+                  <div class="about_menu">
+                     <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li>Doctors</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- doctor section start -->
+      <div class="doctors_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="taital_main">
+                     <div class="taital_left">
+                        <div class="play_icon"><img src="{% static 'images/play-icon.png' %}"></div>
+                     </div>
+                     <div class="taital_right">
+                        <h1 class="doctor_taital">What doctors say..</h1>
+                        <p class="doctor_text">If you have mild symptoms, you may recover at home. You'll likely be asked to isolate yourself as much as possible from family and pets while you're sick, wear a mask when you're around people and pets, and use a separate bedroom and bathroom. It is recommended that you stay in home isolation for a period of time except to get medical care. Follow guidelines from your doctor and local health department about when you can end home isolation.
+                           If you're very ill, you may need to be treated in the hospital.</p>
+                        <div class="readmore_bt"><a href="https://www.mayoclinic.org/diseases-conditions/coronavirus/diagnosis-treatment/drc-20479976">Read More</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- doctor section end -->
+{% endblock %}
