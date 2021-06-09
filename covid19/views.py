@@ -26,37 +26,11 @@ def protect(request):
 def doctors(request):
     return render(request, 'covid19/doctors.html')
 
-
-def get_data():
-    url = "https://coronavirus-tracker-india-covid-19.p.rapidapi.com/api/getStatewiseSorted"
-
-    headers = {
-        'x-rapidapi-key': "5519f84db3msh5c0859d8c7e62e2p1b1035jsnec618e1be311",
-        'x-rapidapi-host': "coronavirus-tracker-india-covid-19.p.rapidapi.com"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-
-    print(response.text)
-
-    data_in_json = json.loads(response.text)
-    return data_in_json
-
-
 def cases(request):
     # url = 'https://www.mohfw.gov.in/data/datanew.json'
     # res = requests.get(url)
 
-    # with open("data.json", "w") as f:
-    #     json.dump(res.json(), f)
-
     data = pd.read_json("https://www.mohfw.gov.in/data/datanew.json")
-    # data.drop(['sno', 'state_code'], axis=1, inplace=True)
-    # data["Active since Yesterday"] = data['new_active'] - data['active']
-    # data["Deaths since Yesterday"] = data['new_death'] - data['death']
-    # data["Cured since Yesterday"] = data['new_cured'] - data['cured']
-    # data.loc[0, 'state_name'] = 'Andaman & Nicobar Island'
-    # data.loc[8, 'state_name'] = 'NCT of Delhi'
     print(data)
     all_obj = Case.objects.all().delete()
     for i in range(1, 36):
